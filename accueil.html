@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <style>
-        body {
-            background-color: #999999; /* Couleur grise pour le fond */
-            margin: 0; /* Supprimer les marges par défaut du body */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh; /* 100% de la hauteur de la fenêtre visible */
-        }
-        img {
-            max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
-            height: auto; /* Gardez les proportions de l'image */
-        }
-    </style>
+    <link href="CSSACCUEIL.css" rel="stylesheet">
 </head>
 <body>
+<img class="logo" src="LOGO.png" alt="Logo">
+<nav>
+    <a href="#">Accueil</a>
+
+    <!-- Bouton déroulant -->
+    <div class="dropdown">
+        <button class="dropdown-select">Tout Parcourir</button>
+        <div class="dropdown-content">
+            <a href="#">Activités sportives</a>
+            <a href="#">Les sports de compétition</a>
+            <a href="#">Salle de sport Omnes</a>
+        </div>
+    </div>
+
+    <a href="#">Recherche</a>
+    <a href="#">Rendez-vous</a>
+    <a href="#">Votre compte</a>
+</nav>
+
 
 
 </body>
