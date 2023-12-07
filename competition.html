@@ -3,55 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Compétition</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link href="CSSACCUEIL.css" rel="stylesheet">
+    <style>
+
+        .carre {
+            border: 2px solid #000; /* Couleur de la bordure et épaisseur */
+            padding: 10px; /* Espace intérieur autour du contenu */
+            width: 630px; /* Largeur de l'encadré */
+            height: 500px; /* Longueur de l'encadré */
+            background: #fff;
+        }
+
+        .carre img {
+            float: left;
+            margin-right: 10px;
+            width: 250px; /* Largeur de l'image */
+            height: auto; /* Hauteur automatique pour maintenir les proportions */
+
+
+        }
+
+        .carre p {
+            text-align: center; /* Aligner le texte à droite */
+        }
+
+    </style>
 </head>
 <body>
+font-family: 'Nom de la Police', sans-serif;
+
 
 <img class="logo" src="LOGO.png" alt="Logo">
 <div class="menu">
-<nav>
-    <a href="#">Accueil</a>
+    <nav>
+        <a href="#">Compétition</a>
 
-    <!-- Bouton déroulant -->
-    <div class="sousmenu">
-        <button class="sousmenu-selection">Tout Parcourir</button>
-        <div class="sousmenu-contenu">
-            <div class="sousmenu-contenu1">
-            <a href="#">Activités sportives</a>
-            <div class="sous-sous-menu">
-                <a href="#">Musculation</a>
-                <a href="#">Fitness</a>
-                <a href="#">Biking</a>
-                <a href="#">Cardio-Training</a>
-                <a href="#">Cours Collectifs</a>
+        <!-- Bouton déroulant -->
+        <div class="sousmenu">
+            <button class="sousmenu-selection">Tout Parcourir</button>
+            <div class="sousmenu-contenu">
+                <div class="sousmenu-contenu1">
+                    <a href="#">Activités sportives</a>
+                    <div class="sous-sous-menu">
+                        <a href="#">Musculation</a>
+                        <a href="#">Fitness</a>
+                        <a href="#">Biking</a>
+                        <a href="#">Cardio-Training</a>
+                        <a href="#">Cours Collectifs</a>
+                    </div>
+                </div>
+                <div class="sousmenu-contenu2">
+                    <a href="#">Les sports de compétition</a>
+                    <div class="sous-sous-menu1">
+                        <a href="#">Basketball</a>
+                        <a href="#">Football</a>
+                        <a href="#">Rugby</a>
+                        <a href="#">Tennis</a>
+                        <a href="#">Natation</a>
+                        <a href="#">Plongeon</a>
+                    </div>
+                </div>
+                <a href="#">Salle de sport Omnes</a>
             </div>
-            </div>
-            <div class="sousmenu-contenu2">
-            <a href="#">Les sports de compétition</a>
-            <div class="sous-sous-menu1">
-                <a href="#">Basketball</a>
-                <a href="#">Football</a>
-                <a href="#">Rugby</a>
-                <a href="#">Tennis</a>
-                <a href="#">Natation</a>
-                <a href="#">Plongeon</a>
-            </div>
-            </div>
-            <a href="#">Salle de sport Omnes</a>
         </div>
-    </div>
 
-    <a href="#">Recherche</a>
-    <a href="#">Rendez-vous</a>
-    <a href="#">Votre compte</a>
-</nav>
+        <a href="#">Recherche</a>
+        <a href="#">Rendez-vous</a>
+        <a href="#">Votre compte</a>
+    </nav>
 </div>
 
 <!-- RAJOUTER LE CODE ICI NE PAS TOUCHER AUX AUTRES PARTIES -->
 
 <div class="content">
+    <div class="carre">
+        <img src="img3.jpg" alt="Coach Natation">
+        <p> Coach de Plongeons Professionel <br> Madison Yoon</p>
+    </div>
+</div>
 
+
+
+/* Hugo */
+
+.solid{
+border-style: solid;
+}
 
 
 
