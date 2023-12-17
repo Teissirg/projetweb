@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Vérifier si l'utilisateur est connecté
+if (isset($_SESSION['utilisateur'])) {
+    $utilisateur = $_SESSION['utilisateur'];
+} else {
+    // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    header('Location: PageConnexion.html');
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +19,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <link href="CSSACCUEIL.css" rel="stylesheet">
+    <style type="text/css">
+        
+        .rectangle1 {
+    width: 500px;
+    height: 450px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    margin-top: 30px;
+    padding: 10px;
+    box-sizing: border-box; /* Garantit que la taille inclut la bordure et le rembourrage */
+    font-family: 'Helvetica', sans-serif;
+    margin-left: auto; /* Centre le rectangle horizontalement */
+    margin-right: auto; /* Centre le rectangle horizontalement */
+}
 
+.rectangle1 p {
+    margin: 0; /* Supprime la marge par défaut du paragraphe à l'intérieur du rectangle */
+}
+    </style>
 </head>
 <body>
 
@@ -47,68 +79,58 @@
     <a href="Rendezvous.php">Rendez-vous</a>
     <a href="profil.php">Votre compte</a>
 </nav>
-</div>
+</div class="content">
 
 <!-- RAJOUTER LE CODE ICI NE PAS TOUCHER AUX AUTRES PARTIES -->
 
-<div class="content">
+
+<div class="rectangle1" style="margin-bottom: 20px;">
 
 
-
-    <div class="rectangle">
-        <div id="texte">
-        <p>Bienvenue sur Sportify, la plateforme révolutionnaire dédiée à la prise de
-            rendez-vous sportif en ligne au sein de la communauté Omnes Education !</p>
-        </div>
-        <br>
-        <p>Plongez dans l'univers dynamique de Sportify, où la recherche du spécialiste idéal
-            devient un jeu d'enfant. Parcourez notre liste exhaustive de professionnels et
-            explorez leurs profils détaillés. Grâce à Sportify, vous avez le pouvoir de choisir
-            votre spécialiste préféré et de planifier un rendez-vous en toute simplicité !</p>
-        <br>
-        <p>Sportify va au-delà de la simple réservation en ligne. C'est une plateforme qui
-            favorise la connexion entre la communauté Omnes Education et ses spécialistes,
-            en mettant à votre disposition des outils modernes pour une expérience sportive
-            inégalée.</p>
-        <br>
-        <p>Rejoignez-nous sur Sportify et transformez la manière dont vous planifiez et vivez
-        vos séances sportives. Nous sommes impatients de vous accompagner dans votre
-            parcours sportif au sein de la communauté Omnes Education !</p>
-    </div>
-
-    <div class="rectangle2">
-        <p id="texte2">Coach de la semaine !</p>
-    </div>
+<div style="text-align: center"><h1>Bienvenue, <?php echo $utilisateur['username']; ?>  !</h1></div>
 
 
+<div style="position: center;">
+<img src="photoprofil.png" height="100" width="100" alt="ProfilImg">
 
+<dl>
+<dt>Vos informations :</dt>
 
+    <dd>Nom d'utilisateur : <?php echo $utilisateur['username']; ?></dd>
+    <dd>Nom : <?php echo $utilisateur['nom']; ?></dd>
+    <dd>Prénom : <?php echo $utilisateur['prenom']; ?></dd>
+    <dd>Numéro étudiant : <?php echo $utilisateur['numero_etudiant']; ?></dd>
+    <dd>Email : <?php echo $utilisateur['email']; ?></dd>
+    <!-- Ajoutez ici d'autres éléments à afficher -->
+    <dd><a href="deconnexion.php"> <input type="button" class="boutoninscription" value='DECONNEXION' align="center"></a></dd>
+    <dd><?php
+    // Vérifier si l'utilisateur est un administrateur (en fonction de l'ID)
+    if ($utilisateur['id'] == 1) {
+?>
+<!-- Afficher le bouton uniquement si l'utilisateur est un administrateur -->
+<a href="admin.php"><input type="button" class="boutoninscription" value="ADMINISTRATION" align="center"></a>
+<?php
+    }
+?></dd>
+</dl>
 
-
-
-
-
-
-
-    <div class="carousel-container">
-        <div class="slide">
-            <img src="img1.jpg" alt="Image 1">
-        </div>
-        <div class="slide">
-            <img src="img2.jpg" alt="Image 2">
-        </div>
-        <div class="slide">
-            <img src="img3.jpg" alt="Image 3">
-        </div>
-    </div>
-    <script src="script.js"></script>
 </div>
 
-<div class="text-carousel">
-    <p>Bryan Changler</p>
-    <p>Marcus Friendlay</p>
-    <p>Natalie Jonhes</p>
+
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
+
 
 
 

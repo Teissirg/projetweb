@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <link href="CSSACCUEIL.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -51,33 +50,35 @@
 
 <!-- RAJOUTER LE CODE ICI NE PAS TOUCHER AUX AUTRES PARTIES -->
 
+
 <div class="content">
 
+<div class="aligner">
+    <div id="container">
+        <!-- zone de connexion -->
+
+        <form action="VerificationConnexion.php" method="POST">
+            <p>Nom d'utilisateur ou mot de passe incorrect.</p>
+            <label><b>Nom d'utilisateur</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+            <label><b>Mot de passe</b></label>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+            <input type="submit" id='submit' value='CONNEXION' >
 
 
-    <div class="rectangle">
-        <div id="texte">
-        <p>Bienvenue sur Sportify, la plateforme révolutionnaire dédiée à la prise de
-            rendez-vous sportif en ligne au sein de la communauté Omnes Education !</p>
-        </div>
-        <br>
-        <p>Plongez dans l'univers dynamique de Sportify, où la recherche du spécialiste idéal
-            devient un jeu d'enfant. Parcourez notre liste exhaustive de professionnels et
-            explorez leurs profils détaillés. Grâce à Sportify, vous avez le pouvoir de choisir
-            votre spécialiste préféré et de planifier un rendez-vous en toute simplicité !</p>
-        <br>
-        <p>Sportify va au-delà de la simple réservation en ligne. C'est une plateforme qui
-            favorise la connexion entre la communauté Omnes Education et ses spécialistes,
-            en mettant à votre disposition des outils modernes pour une expérience sportive
-            inégalée.</p>
-        <br>
-        <p>Rejoignez-nous sur Sportify et transformez la manière dont vous planifiez et vivez
-        vos séances sportives. Nous sommes impatients de vous accompagner dans votre
-            parcours sportif au sein de la communauté Omnes Education !</p>
+
+            <div id="inscription-container">
+                <p>Vous n'avez pas de compte ?</p>
+                <a href="PageInscription.html"> <input type="button" class="boutoninscription" value='INSCRIPTION'></a>
+            </div>
+        </form>
+
+
     </div>
 
-    <div class="rectangle2">
-        <p id="texte2">Coach de la semaine !</p>
+
     </div>
 
 
@@ -90,33 +91,23 @@
 
 
 
-    <div class="carousel-container">
-        <div class="slide">
-            <img src="img1.jpg" alt="Image 1">
-        </div>
-        <div class="slide">
-            <img src="img2.jpg" alt="Image 2">
-        </div>
-        <div class="slide">
-            <img src="img3.jpg" alt="Image 3">
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
-
-<div class="text-carousel">
-    <p>Bryan Changler</p>
-    <p>Marcus Friendlay</p>
-    <p>Natalie Jonhes</p>
-</div>
-
-
-
-
-
-
-
-
 <footer>
     <p>
         Pour toute assistance ou question, n'hésitez pas à nous contacter :
