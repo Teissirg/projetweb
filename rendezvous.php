@@ -93,7 +93,7 @@
         <input type="submit" value="Prendre Rendez-vous">
     </form>
 </div>
-<div class="rendezvous-container">
+<div class="rendezvous-container" style="margin-bottom: 20px;">
     <h1>Rendez-vous pris</h1>
     <ul>
         <?php

@@ -87,7 +87,7 @@ if (isset($_SESSION['utilisateur'])) {
 <div class="rectangle1" style="margin-bottom: 20px;">
 
 
-<div style="text-align: center"><h1>Bienvenue, <?php echo $utilisateur['username']; ?>  !</h1></div>
+<div style="text-align: center"><h1>Bienvenue, <?php echo $utilisateur['prenom']; ?>  !</h1></div>
 
 
 <div style="position: center;">
